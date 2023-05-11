@@ -1,0 +1,702 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>FastWebTech Solutions</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="{% static 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i' %}" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!--  Main CSS File -->
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex justify-content-between">
+
+      <div class="logo">
+        <h1><a href="{% static 'index.html' %}"><span>FAST</span>WEBTECH</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="{% static '#hero' %}">Home</a></li>
+          <li><a class="nav-link scrollto" href="{% static '#about' %}">About</a></li>
+          <li><a class="nav-link scrollto" href="{% static '#services' %}">Services</a></li>
+          <li><a class="nav-link scrollto" href="{% static '#portfolio' %}">Portfolio</a></li>
+          <li><a class="nav-link scrollto" href="{% static '#team' %}">Team</a></li>
+          <li><a href="{% static 'blog.html' %}">Blog</a></li>
+        
+         
+          <li><a class="nav-link scrollto" href="{% static '#contact' %}">Contact</a></li>
+        
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= hero Section ======= -->
+  <section id="hero">
+    <div class="hero-container">
+      <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+  
+        <ol id="hero-carousel-indicators" class="carousel-indicators"></ol>
+  
+        <div class="carousel-inner" role="listbox">
+  
+          <div class="carousel-item active" style="background-image: url({% static 'assets/img/hero-carousel/1.jpg' %})">
+            <div class="carousel-container">
+              <div class="container">
+                <h2 class="animate__animated animate__fadeInDown">Meet Our Founders </h2>
+                <p class="animate__animated animate__fadeInUp">Our founders' passion and dedication to excellence drive our commitment to innovative and successful outcomes for our clients.</p>
+                <a href="{% static '#about' %}" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a>
+              </div>
+            </div>
+          </div>
+  
+          <div class="carousel-item" style="background-image: url({% static 'assets/img/hero-carousel/2.jpg' %})">
+            <div class="carousel-container">
+              <div class="container">
+                <h2 class="animate__animated animate__fadeInDown"> Comprehensive Web Design, System Design, and Hosting solutions for Your Business</h2>
+                <p class="animate__animated animate__fadeInUp">We provide complete web design and development solutions, from concept to maintenance, to ensure a smooth and user-friendly experience for your customers.</p>
+                <a href="{% static '#about' %}" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a>
+              </div>
+            </div>
+          </div>
+  
+          <div class="carousel-item" style=" background-image: url({% static 'assets/img/hero-carousel/3.jpg' %})">
+            <div class="carousel-container">
+              <div class="container">
+                <h2 class="animate__animated animate__fadeInDown">Innovative AI Solutions for Your Business</h2>
+                <p class="animate__animated animate__fadeInUp">We help businesses integrate AI to streamline processes and enhance customer engagement, delivering a competitive edge in a rapidly evolving market.</p>
+                <a href="{% static '#about' %}" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+  
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+  
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+  
+      </div>
+    </div>
+  </section><!-- End Hero Section -->
+  
+  <main id="main">
+
+    <!-- ======= Clients Section ======= -->
+    <section id="clients" class="clients section-bg">
+      <div class="container">
+
+        <div class="row" data-aos="zoom-in">
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="{% static 'assets/img/clients/client-1.png' %}" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="{% static 'assets/img/clients/client-2.png' %}" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="{% static 'assets/img/clients/fastweb.png' %}" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="{% static 'assets/img/clients/udsmlogo.png' %}" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="{% static 'assets/img/clients/client-5.png' %}" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="{% static 'assets/img/clients/client-6.png' %}" class="img-fluid" alt="">
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Clients Section -->
+
+    <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>About Us</h2>
+        </div>
+
+        <div class="row content">
+          <div class="col-lg-6">
+            <p>
+              Welcome to FASTWEBTECH:
+              At FastWebTech, we are passionate about providing top-notch web services to businesses of all sizes. With a team of skilled professionals, we strive to deliver outstanding results and exceed our clients' expectations. <br> <br>
+               
+              We offer a comprehensive range of web services, including web development, web design, web maintenance, domain registration and hosting, e-commerce solutions, custom web applications, content management systems, responsive web design, search engine optimization (SEO), and social media integration. Our team of experienced professionals is well-equipped to handle projects of any complexity and size.
+            </p>
+         
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0">
+            <p>
+              FASTWEBTECH was founded with the vision of helping businesses establish a strong online presence. We have been in the web services industry for 3 years and have earned a reputation for excellence through our commitment to quality, innovation, and customer satisfaction.
+            </p> <br>
+            
+            <a href="{% static '#contact' %}" class="btn-learn-more">Learn More</a>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Us Section -->
+
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us section-bg">
+      <div class="container-fluid" data-aos="fade-up">
+
+        <div class="row">
+
+          <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
+
+            <div class="content">
+              <h3>Why choose US <strong>For your projects</strong></h3>
+              <p>
+                At FASTWEBTECH, we take pride in our commitment to excellence. Here are some reasons why you should choose us for your web services needs:
+              </p>
+            </div>
+
+            <div class="accordion-list">
+              <ul>
+                <li>
+                  <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1"><span>01</span> In term of skills <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list">
+                    <p>
+                      Our team of skilled professionals brings a wealth of experience and expertise to every project..
+                    </p>
+                  </div>
+                </li>
+
+                <li>
+                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed"><span>02</span> Provision of Service <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
+                    <p>
+                     We prioritize customer satisfaction and strive to exceed expectations in every aspect of our services.
+                    </p>
+                  </div>
+                </li>
+
+                <li>
+                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed"><span>03</span> Technologies <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
+                    <p>
+                      We stay up-to-date with the latest web technologies and industry trends to deliver cutting-edge solutions.
+                    </p>
+                  </div>
+                </li>
+
+              </ul>
+            </div>
+
+          </div>
+
+          <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img" style="background-image: url({% static 'assets/img/why-us.png' %});" data-aos="zoom-in" data-aos-delay="150">&nbsp;</div>
+        </div>
+
+      </div>
+    </section><!-- End Why Us Section -->
+
+  
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Services</h2>
+          <p>Our company offers comprehensive web development, web design, web maintenance, and domain and hosting services to help you establish and maintain a professional and effective online presence. With our expertise and commitment to excellence, we can deliver solutions that meet your business objectives and drive results. Contact us today to learn more about how we can help your business succeed online!</p>
+        </div>
+
+        <div class="row">
+          <div class="col-xl-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bxl-dribbble"></i></div>
+              <h4><a href="">Web Development</a></h4>
+              <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+            </div>
+          </div>
+
+          <div class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-file"></i></div>
+              <h4><a href="">Web Design</a></h4>
+              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+            </div>
+          </div>
+
+          
+
+          <div class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="400">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-layer"></i></div>
+              <h4><a href="">Web maintenance</a></h4>
+              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Cta Section ======= -->
+    <section id="cta" class="cta">
+      <div class="container" data-aos="zoom-in">
+
+        <div class="row">
+          <div class="col-lg-9 text-center text-lg-start">
+            <h3>Call To Action</h3>
+            <p> "Experience the Difference".</p>
+          </div>
+          <div class="col-lg-3 cta-btn-container text-center">
+            <a class="cta-btn align-middle" href="#contact">Call To Action</a>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Cta Section -->
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Portfolio</h2>
+          <p>Our portfolio is a testament to our expertise in web development, web design, and other services we offer, displaying our ability to deliver exceptional results for a wide range of clients across different industries..</p>
+        </div>
+
+        <ul id="portfolio-flters" class="d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
+          <li data-filter="*" class="filter-active">All</li>
+          <li data-filter=".filter-app">e-commerce website</li>
+          <li data-filter=".filter-card">System</li>
+          
+        </ul>
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-img"><img src="{% static 'assets/img/portfolio/portfolio-1.jpg' %}" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>App 1</h4>
+              <p>App</p>
+              <a href="{% static 'assets/img/portfolio/portfolio-1.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
+              <a href="{% static 'portfolio-details.html' %}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-img"><img src="{% static 'assets/img/portfolio/portfolio-2.jpg' %}" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Web 3</h4>
+              <p>Web</p>
+              <a href="{% static 'assets/img/portfolio/portfolio-2.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+              <a href="{% static 'portfolio-details.html' %}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-img"><img src="{% static 'assets/img/portfolio/portfolio-3.jpg' %}" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>App 2</h4>
+              <p>App</p>
+              <a href="{% static 'assets/img/portfolio/portfolio-3.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
+              <a href="{% static 'portfolio-details.html' %}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-img"><img src="{% static 'assets/img/portfolio/portfolio-4.jpg' %}" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Card 2</h4>
+              <p>Card</p>
+              <a href="{% static 'assets/img/portfolio/portfolio-4.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
+              <a href="{% static 'portfolio-details.html' %}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-img"><img src="{% static 'assets/img/portfolio/portfolio-5.jpg' %}" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Web 2</h4>
+              <p>Web</p>
+              <a href="{% static 'assets/img/portfolio/portfolio-5.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
+              <a href="{% static 'portfolio-details.html' %}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-img"><img src="{% static 'assets/img/portfolio/portfolio-6.jpg' %}" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>App 3</h4>
+              <p>App</p>
+              <a href="{% static 'assets/img/portfolio/portfolio-6.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
+              <a href="{% static 'portfolio-details.html' %}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-img"><img src="{% static 'assets/img/portfolio/portfolio-7.jpg' %}" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Card 1</h4>
+              <p>Card</p>
+              <a href="{% static 'assets/img/portfolio/portfolio-7.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 1"><i class="bx bx-plus"></i></a>
+              <a href="{% static 'portfolio-details.html' %}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-img"><img src="{% static 'assets/img/portfolio/portfolio-8.jpg' %}" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Card 3</h4>
+              <p>Card</p>
+              <a href="{% static 'assets/img/portfolio/portfolio-8.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 3"><i class="bx bx-plus"></i></a>
+              <a href="{% static 'portfolio-details.html' %}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-img"><img src="{% static 'assets/img/portfolio/portfolio-9.jpg' %}" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Web 3</h4>
+              <p>Web</p>
+              <a href="{% static 'assets/img/portfolio/portfolio-9.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+              <a href="{% static 'portfolio-details.html' %}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Section -->
+
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="team section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Team</h2>
+          <p>Meet our team of experienced professionals who are passionate about web development, web design, and delivering exceptional results for our clients..</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="100">
+            <div class="member d-flex align-items-start">
+              <div class="pic"><img src="{% static 'assets/img/team/team-1.jpg' %}" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Hassan Yange</h4>
+                <span>Developer</span>
+                <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
+                <div class="social">
+                  <a href=""><i class="ri-twitter-fill"></i></a>
+                  <a href=""><i class="ri-facebook-fill"></i></a>
+                  <a href=""><i class="ri-instagram-fill"></i></a>
+                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="200">
+            <div class="member d-flex align-items-start">
+              <div class="pic"><img src="{% static 'assets/img/team/team-3.jpg' %}" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Adolf Faustine</h4>
+                <span>Developer</span>
+                <p>Aut maiores voluptates amet et quis praesentium qui senda para</p>
+                <div class="social">
+                  <a href=""><i class="ri-twitter-fill"></i></a>
+                  <a href=""><i class="ri-facebook-fill"></i></a>
+                  <a href=""><i class="ri-instagram-fill"></i></a>
+                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+      </div>
+    </section><!-- End Team Section -->
+
+   
+
+    <!-- ======= Frequently Asked Questions Section ======= -->
+    <section id="faq" class="faq section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Frequently Asked Questions</h2>
+          <p>Welcome to our Frequently Asked Questions (FAQ) section! We understand that you may have questions about our services, pricing, and process. We have compiled a list of commonly asked questions below to help you better understand our website project. Please feel free to review the questions and answers provided, and if you have any further inquiries, do not hesitate to contact us. We are here to assist you in any way we can!</p>
+        </div>
+
+        <div class="faq-list">
+          <ul>
+            <li data-aos="fade-up" data-aos-delay="100">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">Why is professional web development important for my business? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
+                <p>
+                  Professional web development is crucial for businesses as it ensures a functional, secure, and visually appealing website that reflects the brand's identity and communicates its message effectively. A well-designed website can improve user experience, boost credibility, increase online visibility, and drive more traffic and leads to your business.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="200">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">How can web design enhance my online presence? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  Web design plays a significant role in enhancing your online presence by creating a visually appealing and user-friendly website that engages visitors and encourages them to stay longer, explore your content, and take desired actions. A well-designed website can also help in improving search engine rankings and attracting more organic traffic to your website.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="300">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">Why do I need web maintenance for my website? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  Web maintenance is crucial for keeping your website up-to-date, secure, and functioning smoothly. Regular updates, security patches, and performance optimizations are essential to prevent security vulnerabilities, fix bugs, and ensure that your website loads quickly and provides a seamless user experience.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="400">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-4" class="collapsed"> What are the benefits of having a custom domain and hosting for my website?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  Having a custom domain (e.g., www.yourbusinessname.com) and reliable hosting offers several benefits, such as branding, credibility, and control over your online presence. A custom domain gives your website a professional look and enhances your brand identity, while reliable hosting ensures that your website is accessible and performs well for your visitors.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="500">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-5" class="collapsed">Can I update my website content after it's launched? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  Yes, one of the advantages of a professionally developed website is that it is usually built on a content management system (CMS) that allows you to update and manage your website content easily. You can add, edit, or remove content, images, and other elements without technical expertise.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="600">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-5" class="collapsed">Do you offer ongoing support and maintenance after the website is launched ?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  Yes, we offer ongoing support and maintenance services to ensure that your website remains up-to-date, secure, and performs optimally. Our team of experts can provide regular updates, security patches, bug fixes, and other necessary maintenance activities to keep your website running smoothly.
+                </p>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+
+      </div>
+    </section><!-- End Frequently Asked Questions Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>Don't hesitate to reach out to us.</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-5 d-flex align-items-stretch">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Location:</h4>
+                <p>Dar es salaam,Tanzania</p>
+              </div>
+
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Email:</h4>
+                <p>Fastwebtech@gmail.com</p>
+              </div>
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>Call:</h4>
+                <p>+255685230096 / +255629653757</p>
+              </div>
+
+            
+            </div>
+
+          </div>
+
+          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="form-group col-md-6">
+                  <label for="name">Your Name</label>
+                  <input type="text" name="name" class="form-control" id="name" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="name">Your Email</label>
+                  <input type="email" class="form-control" name="email" id="email" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="name">Subject</label>
+                <input type="text" class="form-control" name="subject" id="subject" required>
+              </div>
+              <div class="form-group">
+                <label for="name">Message</label>
+                <textarea class="form-control" name="message" rows="10" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-newsletter">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <h4>Join Our Newsletter</h4>
+            <p>Get informed</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>FASTWEBTECH</h3>
+            <p>
+        
+              Dar es salaam, Tanzania <br>
+              <strong>Phone:</strong> +255685230096/+255629653757<br>
+              <strong>Email:</strong> Fastwebtech@gmail.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% static 'index.html' %}">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% static '#about' %}">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% static '#services' %}">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% static '#' %}">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% static '#' %}">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% static '#services' %}">Web Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% static '#services' %}">Web Development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% static '#services' %}">Web maintenance</a></li>
+              
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Social Networks</h4>
+            <p>Connect, Share, and Engage with us on our social media platforms.</p>
+            <div class="social-links mt-3">
+              <a href="{% static '#' %}" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <!-- <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a> -->
+              <a href="{% static '#' %}" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="{% static '#' %}" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom clearfix">
+      <div class="copyright">
+        &copy; Copyright <strong><span>FastWebTech</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+       
+        Designed by <a href="{% static 'https://fastwebtech.org/' %}">fastwebtech</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="{% static '#' %}" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/waypoints/noframework.waypoints.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>
