@@ -50,10 +50,8 @@
           <li><a class="nav-link scrollto" href="#services">Services</a></li>
           <li><a class="nav-link scrollto" href=" #portfolio ">Portfolio</a></li>
           <li><a class="nav-link scrollto" href="#team ">Team</a></li>
-          <li><a href="{% static 'blog.html' %}">Blog</a></li>
-        
-         
-          <li><a class="nav-link scrollto" href="{% static '#contact' %}">Contact</a></li>
+          <li><a href="#">Blog</a></li>      
+          <li><a class="nav-link scrollto" href=" #contact ">Contact</a></li>
         
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -75,7 +73,7 @@
               <div class="container">
                 <h2 class="animate__animated animate__fadeInDown">Meet Our Founders </h2>
                 <p class="animate__animated animate__fadeInUp">Our founders' passion and dedication to excellence drive our commitment to innovative and successful outcomes for our clients.</p>
-                <a href="{% static '#about' %}" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a>
+                <a href="#about" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a>
               </div>
             </div>
           </div>
@@ -85,7 +83,7 @@
               <div class="container">
                 <h2 class="animate__animated animate__fadeInDown"> Comprehensive Web Design, System Design, and Hosting solutions for Your Business</h2>
                 <p class="animate__animated animate__fadeInUp">We provide complete web design and development solutions, from concept to maintenance, to ensure a smooth and user-friendly experience for your customers.</p>
-                <a href="{% static '#about' %}" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a>
+                <a href="#about" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a>
               </div>
             </div>
           </div>
@@ -95,7 +93,7 @@
               <div class="container">
                 <h2 class="animate__animated animate__fadeInDown">Innovative AI Solutions for Your Business</h2>
                 <p class="animate__animated animate__fadeInUp">We help businesses integrate AI to streamline processes and enhance customer engagement, delivering a competitive edge in a rapidly evolving market.</p>
-                <a href="{% static '#about' %}" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a>
+                <a href="#about" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a>
               </div>
             </div>
           </div>
@@ -362,7 +360,7 @@
 
           <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="100">
             <div class="member d-flex align-items-start">
-              <div class="pic"><img src="{% static 'assets/img/team/team-1.jpg' %}" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="{% static 'assets/img/team/team-1.jpeg' %}" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Hassan Yange</h4>
                 <span>Developer</span>
@@ -473,14 +471,14 @@
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
       <div class="container" data-aos="fade-up">
-
+    
         <div class="section-title">
           <h2>Contact</h2>
           <p>Don't hesitate to reach out to us.</p>
         </div>
-
+    
         <div class="row">
-
+    
           <div class="col-lg-5 d-flex align-items-stretch">
             <div class="info">
               <div class="address">
@@ -488,57 +486,54 @@
                 <h4>Location:</h4>
                 <p>Dar es salaam,Tanzania</p>
               </div>
-
+    
               <div class="email">
                 <i class="bi bi-envelope"></i>
                 <h4>Email:</h4>
                 <p>Fastwebtech@gmail.com</p>
               </div>
-
+    
               <div class="phone">
                 <i class="bi bi-phone"></i>
                 <h4>Call:</h4>
                 <p>+255685230096 / +255629653757</p>
               </div>
-
-            
+    
             </div>
-
+    
           </div>
-
+    
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form method="post" role="form">
+              {% csrf_token %}
               <div class="row">
                 <div class="form-group col-md-6">
                   <label for="name">Your Name</label>
                   <input type="text" name="name" class="form-control" id="name" required>
                 </div>
                 <div class="form-group col-md-6">
-                  <label for="name">Your Email</label>
+                  <label for="email">Your Email</label>
                   <input type="email" class="form-control" name="email" id="email" required>
                 </div>
               </div>
               <div class="form-group">
-                <label for="name">Subject</label>
+                <label for="subject">Subject</label>
                 <input type="text" class="form-control" name="subject" id="subject" required>
               </div>
               <div class="form-group">
-                <label for="name">Message</label>
+                <label for="message">Message</label>
                 <textarea class="form-control" name="message" rows="10" required></textarea>
               </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+          
+              <div class="text-center"><button type="submit" class="btn btn-primary">Send Message</button></div>
             </form>
           </div>
-
+          
         </div>
-
+    
       </div>
     </section><!-- End Contact Section -->
+    
 
   </main><!-- End #main -->
 
