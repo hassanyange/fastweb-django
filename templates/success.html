@@ -60,52 +60,15 @@
 
         <ol>
           <li><a href=" {% url 'index' %}">Home</a></li>
-          <li>Portfolio Details</li>
         </ol>
-        <h2>Portfolio Details</h2>
+      
 
       </div>
     </section><!-- End Breadcrumbs -->
 
-    <!-- ======= Portfolio Details Section ======= -->
-    <section id="portfolio-details" class="portfolio-details">
-      <div class="container">
-        <div class="row gy-4">
-          <div class="col-lg-8">
-            <div class="portfolio-details-slider swiper">
-              <div class="swiper-wrapper align-items-center">
-                {% for detail in portifolio %}
-                <div class="swiper-slide">
-                  <img src="{{ detail.project_image.url }}" class="img-fluid" alt="">
-                </div>
-                {% endfor %}
-              </div>
-              <div class="swiper-pagination"></div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="portfolio-info">
-              <h3>Project information</h3>
-              {% for detail in portifolio %}
-              <ul>
-                <li><strong>Category</strong>: {{ detail.category }}</li>
-                <li><strong>Client</strong>: {{ detail.client }}</li>
-                <li><strong>Project date</strong>: {{ detail.project_Date }}</li>
-                <li><strong>Project URL</strong>: <a href="{{ detail.project_url }}">{{ detail.project_url }}</a></li>
-              </ul>
-              {% endfor %}
-            </div>
-            <div class="portfolio-description">
-              <h2>This is an example of portfolio detail</h2>
-              {% for detail in portifolio %}
-              <p>{{ detail.project_description }}</p>
-              {% endfor %}
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
+    <div class="text-center"> <h2 >Thank you for contacting us!</h2></div>
+
+   
 
   </main><!-- End #main -->
 

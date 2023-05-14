@@ -305,42 +305,21 @@
           <p>Our portfolio is a testament to our expertise in web development, web design, and other services we offer, displaying our ability to deliver exceptional results for a wide range of clients across different industries..</p>
         </div>
 
-        <ul id="portfolio-flters" class="d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
-          <li data-filter="*" class="filter-active">All</li>
-          <li data-filter=".filter-app">e-commerce website</li>
-          <li data-filter=".filter-card">System</li>
-          
-        </ul>
+       
 
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+        <div class="row portfolio-container" >
 
+          {% for item in portifolio_section %}
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-img"><img src="{% static 'assets/img/portfolio/portfolio-1.jpg' %}" class="img-fluid" alt=""></div>
+            <div class="portfolio-img"><img src="{{ item.project_image }}" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
-              <h4>App 1</h4>
-              <p>App</p>
-              <a href="{% static 'assets/img/portfolio/portfolio-1.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
+              <h4>{{ item.project_name }}</h4>
+              <a href="{{ item.project_image }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="{{ item.project_name }}"><i class="bx bx-plus"></i></a>
               <a href="{% url 'portifolio' %}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
-
+        {% endfor %}
         
-
-      
-
-        
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-img"><img src="{% static 'assets/img/portfolio/portfolio-7.jpg' %}" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>Card 1</h4>
-              <p>Card</p>
-              <a href="{% static 'assets/img/portfolio/portfolio-7.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 1"><i class="bx bx-plus"></i></a>
-              <a href="{% url 'portifolio' %}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-    
 
         </div>
 
@@ -504,24 +483,29 @@
           </div>
     
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form method="post" role="form">
+            <form method="post" action=" {% url 'index' %}"  >
               {% csrf_token %}
+           
               <div class="row">
                 <div class="form-group col-md-6">
                   <label for="name">Your Name</label>
+                
                   <input type="text" name="name" class="form-control" id="name" required>
                 </div>
                 <div class="form-group col-md-6">
                   <label for="email">Your Email</label>
+                  
                   <input type="email" class="form-control" name="email" id="email" required>
                 </div>
               </div>
               <div class="form-group">
                 <label for="subject">Subject</label>
+               
                 <input type="text" class="form-control" name="subject" id="subject" required>
               </div>
               <div class="form-group">
                 <label for="message">Message</label>
+               
                 <textarea class="form-control" name="message" rows="10" required></textarea>
               </div>
           
