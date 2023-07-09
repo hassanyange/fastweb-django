@@ -1,13 +1,10 @@
 from django.urls import path
-from .import views
+from . import views
 from django.conf import settings
 from django.conf.urls.static import static
-
-
 
 urlpatterns = [
     path('', views.index, name='index'),
     path('portifolio', views.portifolio, name='portifolio'),
-    path('',views.portifolio_section, name='portifolio_section'),
-    path('', views.contact, name='contact')
-]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    path('contact', views.contact, name='contact'),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

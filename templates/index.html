@@ -16,7 +16,8 @@
   <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link href="{% static 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i' %}" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
 
   <!-- Vendor CSS Files -->
   <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
@@ -68,7 +69,8 @@
   
         <div class="carousel-inner" role="listbox">
   
-          <div class="carousel-item active" style="background-image: url({% static 'assets/img/hero-carousel/1.jpg' %})">
+          <div class="carousel-item active" style="background-image: url('/static/assets/img/hero-carousel/1.jpg')">
+
             <div class="carousel-container">
               <div class="container">
                 <h2 class="animate__animated animate__fadeInDown">Meet Our Founders </h2>
@@ -78,7 +80,7 @@
             </div>
           </div>
   
-          <div class="carousel-item" style="background-image: url({% static 'assets/img/hero-carousel/2.jpg' %})">
+          <div class="carousel-item" style="background-image: url('/static/assets/img/hero-carousel/2.jpg')">
             <div class="carousel-container">
               <div class="container">
                 <h2 class="animate__animated animate__fadeInDown"> Comprehensive Web Design, System Design, and Hosting solutions for Your Business</h2>
@@ -88,7 +90,7 @@
             </div>
           </div>
   
-          <div class="carousel-item" style=" background-image: url({% static 'assets/img/hero-carousel/3.jpg' %})">
+          <div class="carousel-item" style=" background-image: url('/static/assets/img/hero-carousel/3.jpg')">
             <div class="carousel-container">
               <div class="container">
                 <h2 class="animate__animated animate__fadeInDown">Innovative AI Solutions for Your Business</h2>
@@ -230,7 +232,7 @@
 
           </div>
 
-          <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img" style="background-image: url({% static 'assets/img/why-us.png' %});" data-aos="zoom-in" data-aos-delay="150">&nbsp;</div>
+          <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img" style="background-image: url('/static/assets/img/why-us.png');" data-aos="zoom-in" data-aos-delay="150">&nbsp;</div>
         </div>
 
       </div>
@@ -299,31 +301,27 @@
     <!-- ======= Portfolio Section ======= -->
     <section id="portfolio" class="portfolio">
       <div class="container" data-aos="fade-up">
-
         <div class="section-title">
-          <h2>Portfolio</h2>
-          <p>Our portfolio is a testament to our expertise in web development, web design, and other services we offer, displaying our ability to deliver exceptional results for a wide range of clients across different industries..</p>
+            <h2>Portfolio</h2>
+            <p>Our portfolio is a testament to our expertise in web development, web design, and other services we offer, displaying our ability to deliver exceptional results for a wide range of clients across different industries.</p>
         </div>
-
-       
-
-        <div class="row portfolio-container" >
-
-          {% for item in portifolio_section %}
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-img"><img src="{{ item.project_image }}" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>{{ item.project_name }}</h4>
-              <a href="{{ item.project_image }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="{{ item.project_name }}"><i class="bx bx-plus"></i></a>
-              <a href="{% url 'portifolio' %}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+    
+        <div class="row portfolio-container">
+            {% for item in portifolio_section %}
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                <div class="portfolio-img">
+                    <img src="{{ item.project_image.url }}" class="img-fluid" alt="">
+                </div>
+                <div class="portfolio-info">
+                    <h4>{{ item.project_name }}</h4>
+                    <a href="{{ item.project_image.url }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="{{ item.project_name }}"><i class="bx bx-plus"></i></a>
+                    <a href="{% url 'portifolio' %}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
             </div>
-          </div>
-        {% endfor %}
-        
-
+            {% endfor %}
         </div>
-
-      </div>
+    </div>
+    
     </section><!-- End Portfolio Section -->
 
     <!-- ======= Team Section ======= -->
