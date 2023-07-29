@@ -1,9 +1,10 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.conf import settings
-from .models import Portifolio_detail, Portifolio_section, Contact
+from .models import Portifolio_detail, Portifolio_section
 from django.core.mail import send_mail
 from django.http import HttpResponse
+from .forms import  ContactForm
 
 
 # Create your views here.
@@ -20,18 +21,24 @@ def portifolio(request):
 #     portfolio_sections = Portifolio_section.objects.all()
 #     return render(request, 'portfolio_section.html', {'portfolio_sections': portfolio_sections})
 
-def contact(request):
-    if request.method == 'POST':
-        contact = Contact()
-        name = request.POST.get('name')
-        email = request.POST.get('email')
-        subject = request.POST.get('subject')
-        message = request.POST.get('message')
-        contact.name = name
-        contact.email = email
-        contact.subject = subject
-        contact.message = message
-        contact.save()
-        return HttpResponse('Thanks for contacting us!')
-                     
-    return render(request, 'index.html')
+def myform(request):
+    if request.method == "POST":
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            name = form.cleaned_data["name"]
+            email = form.cleaned_data["email"]
+            subject = form.cleaned_data["subject"]
+            message = form.cleaned_data["message"]
+
+            recipients = ["hassanyage@gmail.com"]
+
+        try:
+            send_mail(subject, message, from_email, recipients)
+        except Exception as e:
+           
+            print(f"Error sending email: {e}")
+            return HttpResponseRedirect("/error/")  # Redirect to an error page
+
+        return HttpResponseRedirect("/thanks for contact us/")
+
+

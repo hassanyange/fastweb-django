@@ -39,11 +39,11 @@
     <div class="container d-flex justify-content-between">
 
       <div class="logo">
-        <h1><a href="{% url 'index' %}"><span>FAST</span>WEBTECH</a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+        <a href="{% url 'index' %}">
+          <img src="{% static 'assets/img/clients/fastweb.png' %}" alt="" class="img-fluid logo-image" width="110px" height="150px">
+        </a>
       </div>
-
+      
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="{% url 'index' %}">Home</a></li>
