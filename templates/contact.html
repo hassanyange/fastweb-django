@@ -52,23 +52,79 @@
     </div>
   </header><!-- End Header -->
 
-  <main id="main">
-
-    <!-- ======= Breadcrumbs ======= -->
-    <section id="breadcrumbs" class="breadcrumbs">
-      <div class="container">
-
-        <ol>
-          <li><a href=" {% url 'index' %}">Home</a></li>
-        </ol>
-      
-
+  <main>
+    
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+    
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>Don't hesitate to reach out to us.</p>
+        </div>
+    
+        <div class="row">
+    
+          <div class="col-lg-5 d-flex align-items-stretch">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Location:</h4>
+                <p>Dar es salaam,Tanzania</p>
+              </div>
+    
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Email:</h4>
+                <p>Fastwebtech@gmail.com</p>
+              </div>
+    
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>Call:</h4>
+                <p>+255685230096 / +255629653757</p>
+              </div>
+    
+            </div>
+    
+          </div>
+    
+          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+            <form method="post" action=""  >
+              {% csrf_token %}
+        
+              <div class="row">
+                <div class="form-group col-md-6">
+                  <label for="name">Your Name</label>
+                
+                  <input type="text" name="name" class="form-control" id="name" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="email">Your Email</label>
+                  
+                  <input type="email" class="form-control" name="email" id="email" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject</label>
+               
+                <input type="text" class="form-control" name="subject" id="subject" required>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+               
+                <textarea class="form-control" name="message" rows="10" required></textarea>
+              </div>
+          
+              <div class="text-center"><button type="submit" class="btn btn-primary">Send Message</button></div>
+            </form>
+          </div>
+          
+        </div>
+    
       </div>
-    </section><!-- End Breadcrumbs -->
-
-    <div class="text-center"> <h2 >Thank you for contacting us!</h2></div>
-
-   
+    </section><!-- End Contact Section -->
+    
 
   </main><!-- End #main -->
 
