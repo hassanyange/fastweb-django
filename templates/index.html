@@ -53,7 +53,7 @@
           <li><a class="nav-link scrollto" href="#team ">Team</a></li>
           <li><a href="#">Blog</a></li>      
           <li><a class="nav-link scrollto" href="  {% url 'myForm'  %}">Contact</a></li>
-        
+        </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
@@ -61,7 +61,7 @@
   </header><!-- End Header -->
 
   <!-- ======= hero Section ======= -->
-  <section id="hero">
+  <section  id="hero" >
     <div class="hero-container">
       <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
   
@@ -69,7 +69,7 @@
   
         <div class="carousel-inner" role="listbox">
   
-          <div class="carousel-item active" style="background-image: url('/static/assets/img/hero-carousel/1.jpg')">
+          <div class="carousel-item active" style="background-image: url('/static/assets/img/hero-carousel/Founder.jpg')">
 
             <div class="carousel-container">
               <div class="container">
@@ -80,7 +80,7 @@
             </div>
           </div>
   
-          <div class="carousel-item" style="background-image: url('/static/assets/img/hero-carousel/2.jpg')">
+          <div class="carousel-item" style="background-image: url('/static/assets/img/hero-carousel/web design.jpg')">
             <div class="carousel-container">
               <div class="container">
                 <h2 class="animate__animated animate__fadeInDown"> Comprehensive Web Design, System Design, and Hosting solutions for Your Business</h2>
@@ -90,7 +90,7 @@
             </div>
           </div>
   
-          <div class="carousel-item" style=" background-image: url('/static/assets/img/hero-carousel/3.jpg')">
+          <div class="carousel-item" style=" background-image: url('/static/assets/img/hero-carousel/AI.jpeg')">
             <div class="carousel-container">
               <div class="container">
                 <h2 class="animate__animated animate__fadeInDown">Innovative AI Solutions for Your Business</h2>
@@ -291,7 +291,7 @@
             <p> "Experience the Difference".</p>
           </div>
           <div class="col-lg-3 cta-btn-container text-center">
-            <a class="cta-btn align-middle" href="#contact">Call To Action</a>
+            <a class="cta-btn align-middle" href="{% url 'myForm' %}">Call To Action</a>
           </div>
         </div>
 

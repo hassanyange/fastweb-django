@@ -29,9 +29,8 @@ def myForm(request):
         message = request.POST.get("message")
         query = Contact(name=name, email=email, subject=subject, message=message)
         query.save()
-        messages.info(request, "Thanks for Reaching Us! we  will get you back soon....")
+        messages.info(request,"Thanks for Reaching Us! we  will get you back soon....")
         return redirect("/contact")
-
-    return render(request, 'contact.html')
+    return render(request,'contact.html')
 
 
