@@ -37,12 +37,12 @@
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-center">
     <div class="container d-flex justify-content-between">
-
-      <div class="logo">
-        <a href="{% url 'index' %}">
+      <h2 class="logo me-auto"><a href=" {% url 'index' %}">FASTWEBTECH</a></h2>
+      <!-- <div class="logo">
+        <a href="{% url 'index' %}"> 
           <img src="{% static 'assets/img/clients/fastweb.png' %}" alt="" class="img-fluid logo-image" width="110px" height="150px">
         </a>
-      </div>
+      </div> -->
       
       <nav id="navbar" class="navbar">
         <ul>
@@ -176,7 +176,7 @@
               FASTWEBTECH was founded with the vision of helping businesses establish a strong online presence. We have been in the web services industry for 3 years and have earned a reputation for excellence through our commitment to quality, innovation, and customer satisfaction.
             </p> <br>
             
-            <a href="{% static '#contact' %}" class="btn-learn-more">Learn More</a>
+            <a href="{% url 'myForm' %}" class="btn-learn-more">Learn More</a>
           </div>
         </div>
 
@@ -253,7 +253,7 @@
           <div class="col-xl-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
             <div class="icon-box">
               <div class="icon"><i class="bx bxl-dribbble"></i></div>
-              <h4><a href="">Web Development</a></h4>
+              <h4><a href="{% url 'myForm'%}">Web Development</a></h4>
               <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
             </div>
           </div>
@@ -261,7 +261,7 @@
           <div class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-file"></i></div>
-              <h4><a href="">Web Design</a></h4>
+              <h4><a href="{% url 'myForm' %}">Web Design</a></h4>
               <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
             </div>
           </div>
@@ -271,7 +271,7 @@
           <div class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="400">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-layer"></i></div>
-              <h4><a href="">Web maintenance</a></h4>
+              <h4><a href="{% url 'myForm' %}">Web maintenance</a></h4>
               <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
             </div>
           </div>
@@ -485,6 +485,7 @@
             <li><i class="bx bx-chevron-right"></i> <a href="#hero">Home</a></li>
             <li><i class="bx bx-chevron-right"></i> <a href="#about' ">About us</a></li>
             <li><i class="bx bx-chevron-right"></i> <a href="#services">Services</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="{% url 'myForm' %}">Contact</a></li>
             <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
             <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
           </ul>
